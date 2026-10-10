@@ -1,6 +1,6 @@
 # Business Central & IA · colección de Javier Armesto
 
-**[Abrir la web pública](https://javier-armesto-bc-ai-hub.iamironman.chatgpt.site)** · [Perfil de GitHub](https://github.com/javiarmesto)
+**[Abrir la web pública](https://javier-armesto-bc-ai-hub.vercel.app)** · [Perfil de GitHub](https://github.com/javiarmesto)
 
 ## ALDC · AL Agentic Engineering System
 
@@ -41,6 +41,8 @@ Este repositorio contiene la colección y el sitio estático: `dist/index.html`,
 
 ALDC tiene el espacio principal. BCQuality y BC-Bench enlazan los originales; las contribuciones del fork y la guía propia se identifican expresamente. Los eventos futuros tienen su estado separado. La colección editorial complementa el [inventario documental](https://github.com/javiarmesto/ALDC-AL-Development-Collection/blob/main/docs/public-repositories.md), que conserva el detalle de la revisión.
 
-Para otro hosting estático, usar `dist` como directorio público. En Vercel seleccionar Other, sin comando de build, directorio de salida `dist`. Esa alternativa no se ha desplegado ni probado aquí. La web publicada se sirve desde Sites.
+La web está desplegada en Vercel y conectada a este repositorio. Los cambios en `main` se publican automáticamente. `vercel.json` configura Other, sin instalación ni build, con `dist` como directorio de salida. La versión anterior de Sites se conserva como referencia.
+
+Diseño de cuaderno de ingeniería: retícula, mapa visual de ALDC e índice numerado de recursos. Filtros y búsqueda comprobados en la web desplegada.
 
 Antes de publicar cambios: `node --check dist/app.js`; revisar enlaces, fechas y autores. Las licencias de los recursos enlazados se consultan en sus repositorios y no se amplían por aparecer en esta colección.
