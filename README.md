@@ -46,3 +46,11 @@ La web está desplegada en Vercel y conectada a este repositorio. Los cambios en
 Diseño de cuaderno de ingeniería: retícula, mapa visual de ALDC e índice numerado de recursos. Filtros y búsqueda comprobados en la web desplegada.
 
 Antes de publicar cambios: `node --check dist/app.js`; revisar enlaces, fechas y autores. Las licencias de los recursos enlazados se consultan en sus repositorios y no se amplían por aparecer en esta colección.
+
+## Armesto World
+
+El mapa jugable está integrado en la landing ES/EN y se sirve desde `dist/world/`, bajo `/world/`. La portada lo incluye en un iframe del mismo dominio; `/world/?embed=1` muestra la versión compacta y `/world/` abre la experiencia completa. No depende del Site privado de ChatGPT.
+
+La experiencia interactiva está en español. Presenta seis proyectos, sus README, la ficha de Javier y hasta 30 eventos públicos disponibles de GitHub. Consulta la API pública sin token y conserva una copia fechada para fallos de red o límites de peticiones. El progreso y los 100 XP por proyecto visitado representan la exploración del visitante y se guardan en su navegador, no métricas de productividad de Javier.
+
+Comprobar también `node --check dist/world/app.js` y `node --check dist/world/snapshot.js`. Probar la navegación de la landing, el iframe en escritorio/móvil, las fichas, los README y el regreso desde `/world/` al cuaderno público.

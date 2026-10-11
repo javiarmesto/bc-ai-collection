@@ -31,3 +31,11 @@ document.querySelector('#events').innerHTML=events.map(e=>`<article class="event
 
 // Preserve the current section when switching languages.
 document.querySelectorAll('.languages a').forEach(a=>a.addEventListener('click',()=>{a.hash=window.location.hash;}));
+
+// Resize only the same-origin World frame; messages from other sources are ignored.
+const worldFrame=document.querySelector('#world-preview');
+window.addEventListener('message',event=>{
+  if(!worldFrame||event.origin!==location.origin||event.source!==worldFrame.contentWindow)return;
+  if(event.data?.type!=='armesto-world-height'||!Number.isFinite(event.data.height))return;
+  worldFrame.style.height=Math.max(300,Math.min(2400,Math.ceil(event.data.height)))+'px';
+});
